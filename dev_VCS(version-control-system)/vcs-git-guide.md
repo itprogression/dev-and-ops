@@ -98,10 +98,16 @@ Source:
 ```
 
 ### Connect a local repository with a remote repository
-git remote add origin  <REMOTE_URL>
+
+```
+    git remote add origin  <REMOTE_URL>
+```
 
 ### Push the changes in your local repository to GitHub.com.
-git push -u origin main
+
+```
+    git push -u origin main
+```
 
 ## Ordering the flow with GIT (Git flow vs GitHub flow)
 
