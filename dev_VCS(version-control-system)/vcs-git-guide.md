@@ -94,7 +94,7 @@ Source:
   * Commit the files that you've staged in your local repository.
 
 ```
-    git commit -m "First commit"
+    git commit -S -m "First commit"
 ```
 
 ### Connect a local repository with a remote repository
