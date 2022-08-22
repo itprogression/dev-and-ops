@@ -113,8 +113,14 @@ Source:
 
 ### Push the changes in your local repository to GitHub.com.
 
+* A branch that already exists remotely
 ```
     git push -u origin main
+```
+
+* A new branch in local, which does not exist in remote
+```
+    git push --set-upstream origin newBranch
 ```
 
 ## Ordering the flow with GIT (Git flow vs GitHub flow)
@@ -271,11 +277,13 @@ git-checkout
 
 ```
 git checkout master
+git pull
 git branch new-feature
 git checkout new-feature
 git add filenameWithChanges
 git commit -S -m "merge commit msg"
 git checkout master
+git pull
 git merge new-feature
 
 ```
