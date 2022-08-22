@@ -39,10 +39,12 @@ ssb   4096R/42B317FD4BA89E7A 2016-03-10
 ### Advance: Configure Meld as difftool and mergetool for GIT
 
 Source:
-    - https://www.delftstack.com/es/howto/git/git-diff-meld/
+ - https://www.delftstack.com/es/howto/git/git-diff-meld/
 
 
 #### For Windows users, run these commands
+
+```
 git config --global diff.tool meld
 git config --global difftool.meld.path "C:\Program Files (x86)\Meld\Meld.exe"
 git config --global difftool.prompt false
@@ -51,7 +53,11 @@ git config --global merge.tool meld
 git config --global mergetool.meld.path "C:\Program Files (x86)\Meld\Meld.exe"
 git config --global mergetool.prompt false
 
+```
+
 #### For linux/mac users, run these commands
+
+```
 git config --global diff.tool meld
 git config --global difftool.meld.path "/usr/bin/meld"
 git config --global difftool.prompt false
@@ -59,6 +65,8 @@ git config --global difftool.prompt false
 git config --global merge.tool meld
 git config --global mergetool.meld.path "/usr/bin/meld"
 git config --global mergetool.prompt false
+
+```
 
 ## Genesis of GIT
 
@@ -241,7 +249,7 @@ git-checkout
 * Create a signed commit: git commit -S -m
   * -s / --signoff / --no-signoff:
     * Add a Signed-off-by trailer by the committer at the end of the commit log message. The meaning of a signoff depends on the project to which you’re committing. For example, it may certify that the committer has the rights to submit the work under the project’s license or agrees to some contributor representation, such as a Developer Certificate of Origin.
-  * https://docs.github.com/en/github/authenticating-to-github/managing-commit-signature-verification/telling-git-about-your-signing-key
+  - https://docs.github.com/en/github/authenticating-to-github/managing-commit-signature-verification/telling-git-about-your-signing-key
 
 ```
     git commit -S -m "your commit message"
@@ -251,7 +259,7 @@ git-checkout
 #### Share your code:
 
 * git push
-  * https://git-scm.com/docs/git-push
+  - https://git-scm.com/docs/git-push
 
 ```
     git push origin <existing_branch>
@@ -261,12 +269,16 @@ git-checkout
 
 ### Merge: B (new-feature) to A (master)
 
-git checkout master (A)
+```
+git checkout master
 git branch new-feature
-git checkout new-feature (B)
-*commit's*
+git checkout new-feature
+git add filenameWithChanges
+git commit -S -m "merge commit msg"
 git checkout master
 git merge new-feature
+
+```
 
 #### Start:
 
@@ -283,23 +295,34 @@ X
 
 ### delete branch
 * locally *
+```
 git branch -d localBranchName
 git branch -d 638-opendistro-documentation
 
+```
+
 * remotely *
+```
 git push origin --delete remoteBranchName
 
+```
+
 ### Create, list, delete or verify a tag object signed with GPG
-    * https://git-scm.com/docs/git-tag
+ - https://git-scm.com/docs/git-tag
 
 #### Creando una etiqueta ligera (lightweight)
-git tag <nombre_etiqueta>
+```
+git tag <tagName>
+
+```
 
 #### Creando una etiqueta anotada (annotated)
-git tag -a <nombre_etiqueta> -m "Mensaje descriptivo aquí"
+```
+git tag -a <tagName> -m "tag msg"
 
+```
 ### Stash the changes in a dirty working directory away
-  * https://git-scm.com/docs/git-stash
+  - https://git-scm.com/docs/git-stash
 
   * stash save
 
