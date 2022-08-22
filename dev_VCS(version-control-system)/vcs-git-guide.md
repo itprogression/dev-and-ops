@@ -2,9 +2,11 @@
 
 ## Configure git
 
+```
 git config --global user.email "email_account@domain.com"
 git config --global user.name "Name Lastname"
 git config --global core.editor "vim"
+```
 
 ### Advence: Signing commits
 
