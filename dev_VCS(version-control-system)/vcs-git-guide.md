@@ -70,6 +70,42 @@ git config --global mergetool.prompt false
 
 ```
 
+### Advance: Git Tools
+
+#### Credential Storage
+
+```
+Attention: This method saves the credentials in plaintext on your PC's disk.
+```
+
+Run
+```
+git config --global credential.helper store
+```
+
+then
+
+```
+git pull
+```
+
+If you want to change the password later
+
+
+```
+git pull
+
+```
+
+Will fail, because the password is incorrect, git then removes the offending user+password from the ~/.git-credentials file, so now re-run
+
+
+```
+git pull
+```
+
+to provide a new password so it works as earlier.
+
 ## Genesis of GIT
 
 ### The Three States
