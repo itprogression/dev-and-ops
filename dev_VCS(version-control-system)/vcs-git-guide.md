@@ -225,6 +225,24 @@ git switch <existing_branch>
 git switch --create <new_branch>
 ```
 
+* To see local branch names, run
+
+```
+git branch
+```
+
+* To see all remote branch names, run
+
+```
+git branch -r
+```
+
+* To see all local and remote branches, run
+
+```
+git branch -a
+```
+
 * Bring to your local, the latest changes from the remote repo
 
 ```
