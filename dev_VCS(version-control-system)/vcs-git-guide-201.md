@@ -17,3 +17,27 @@
  git reset --hard origin/workingBranch
 ```
 
+## How to Undo the Last Commit
+
+### The revert command
+The revert command will create a commit that reverts the changes of the commit being targeted. You can use it to revert the last commit like this:
+
+```
+ git revert <commit to revert>
+```
+
+### The reset command
+You can also use the reset command to undo your last commit. But be careful – it will change the commit history, so you should use it rarely. It will move the HEAD, the working branch, to the indicated commit, and discard anything after:
+The --soft option means that you will not lose the uncommitted changes you may have.
+
+```
+ git reset --soft HEAD~1
+```
+
+If you want to reset to the last commit and also remove all unstaged changes, you can use the --hard option:
+
+```
+ git reset --hard HEAD~1
+```
+
+
